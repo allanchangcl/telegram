@@ -23,8 +23,8 @@ $ node ./bin/www
 
 ### Screenshots
 
-![Screenshot#1](https://raw.githubusercontent.com/clchangnet/telegram/faacc6c752f7b43e7fb8200ba346e585066ad200/telegram_2019-06-03-16-13-20.png)
-![Screenshot#2](https://raw.githubusercontent.com/clchangnet/telegram/faacc6c752f7b43e7fb8200ba346e585066ad200/telegram_2019-06-03-16-22-19.png)
-![Screenshot#3](https://raw.githubusercontent.com/clchangnet/telegram/faacc6c752f7b43e7fb8200ba346e585066ad200/telegram_2019-06-03-16-30-42.jpg)
+![Screenshot#1](/images/telegram_2019-06-03-16-13-20.png)
+![Screenshot#2](/images/telegram_2019-06-03-16-22-19.png)
+![Screenshot#3](/images/telegram_2019-06-03-16-30-42.jpg)
 
 ### To see a working demo site, goto [Send Telegram to Full Stack Developer!](https://clchang.net/about)
