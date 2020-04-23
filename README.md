@@ -19,7 +19,7 @@ $ node ./bin/www
 
 ### Send Message
 
-\$ curl -X POST http://localhost:3000 -H "Content-Type: application/json" -d '{"message":"Call me at 000-0000000"}
+$ curl -X POST http://localhost:3000 -H "Content-Type: application/json" -d '{"message":"Call me at 000-0000000"}'
 
 ### Screenshots
 

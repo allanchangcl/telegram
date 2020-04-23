@@ -1,6 +1,7 @@
 require("dotenv").config();
 var createError = require("http-errors");
 var express = require("express");
+var helmet = require("helmet")
 var path = require("path");
 
 var app = express();
@@ -10,6 +11,7 @@ const telegram = new Telegram(process.env.BOT_TOKEN, {
   webhookReply: true
 });
 
+app.use(helmet())
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
