@@ -11,6 +11,7 @@ const telegram = new Telegram(process.env.BOT_TOKEN, {
   webhookReply: true,
 })
 
+var cors = require("cors")
 app.use(helmet())
 // cors
 app.use(cors())
