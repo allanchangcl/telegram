@@ -1,11 +1,12 @@
 require("dotenv").config()
 var createError = require("http-errors")
 var express = require("express")
+var cors = require("cors")
+var app = express()
+app.use(cors())
 var helmet = require("helmet")
 var path = require("path")
 
-// var cors = require("cors")
-var app = express()
 const Telegram = require("telegraf/telegram")
 const telegram = new Telegram(process.env.BOT_TOKEN, {
   agent: null,
@@ -13,8 +14,6 @@ const telegram = new Telegram(process.env.BOT_TOKEN, {
 })
 
 app.use(helmet())
-// cors
-// app.use(cors())
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
