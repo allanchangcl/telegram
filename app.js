@@ -4,6 +4,7 @@ var express = require("express")
 var helmet = require("helmet")
 var path = require("path")
 
+var cors = require("cors")
 var app = express()
 const Telegram = require("telegraf/telegram")
 const telegram = new Telegram(process.env.BOT_TOKEN, {
@@ -11,7 +12,6 @@ const telegram = new Telegram(process.env.BOT_TOKEN, {
   webhookReply: true,
 })
 
-var cors = require("cors")
 app.use(helmet())
 // cors
 app.use(cors())
