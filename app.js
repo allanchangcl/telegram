@@ -4,7 +4,7 @@ var express = require("express")
 var helmet = require("helmet")
 var path = require("path")
 
-var cors = require("cors")
+// var cors = require("cors")
 var app = express()
 const Telegram = require("telegraf/telegram")
 const telegram = new Telegram(process.env.BOT_TOKEN, {
@@ -14,16 +14,16 @@ const telegram = new Telegram(process.env.BOT_TOKEN, {
 
 app.use(helmet())
 // cors
-app.use(cors())
+// app.use(cors())
 
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  )
+  next()
+})
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
